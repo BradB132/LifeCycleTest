@@ -58,7 +58,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LCViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -68,7 +68,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="186-9Y-2nN">
-                                <rect key="frame" x="178.5" y="225" width="123" height="30"/>
+                                <rect key="frame" x="178" y="225" width="123" height="30"/>
                                 <state key="normal" title="Show Next Scene">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -86,9 +86,19 @@
                                     <segue destination="nAf-ze-web" kind="embed" identifier="testEmbed" id="W5l-dt-Xdb"/>
                                 </connections>
                             </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hAX-8Q-XeO" customClass="LCView">
+                                <rect key="frame" x="181" y="96" width="117" height="91"/>
+                                <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="91" id="SFU-uE-9Tl"/>
+                                    <constraint firstAttribute="width" constant="117" id="qF2-OT-G3L"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="hAX-8Q-XeO" secondAttribute="centerX" constant="0.5" id="2Ku-Xa-Nsw"/>
+                            <constraint firstItem="186-9Y-2nN" firstAttribute="top" secondItem="hAX-8Q-XeO" secondAttribute="bottom" constant="38" id="Cq0-py-oj1"/>
                             <constraint firstAttribute="centerX" secondItem="186-9Y-2nN" secondAttribute="centerX" id="Tjx-hh-f9X"/>
                             <constraint firstAttribute="centerX" secondItem="63v-kO-qa7" secondAttribute="centerX" id="akV-xj-RSd"/>
                             <constraint firstAttribute="centerY" secondItem="186-9Y-2nN" secondAttribute="centerY" id="gMd-No-Rhh"/>

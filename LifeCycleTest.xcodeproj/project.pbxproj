@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9BD90B63198EA9E800A63721 /* LCView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD90B62198EA9E800A63721 /* LCView.m */; };
 		9BE316E91983E65200D402FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE316E81983E65200D402FC /* main.m */; };
 		9BE316EC1983E65200D402FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE316EB1983E65200D402FC /* AppDelegate.m */; };
-		9BE316EF1983E65200D402FC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE316EE1983E65200D402FC /* ViewController.m */; };
+		9BE316EF1983E65200D402FC /* LCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE316EE1983E65200D402FC /* LCViewController.m */; };
 		9BE316F21983E65200D402FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BE316F01983E65200D402FC /* Main.storyboard */; };
 		9BE316F41983E65200D402FC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BE316F31983E65200D402FC /* Images.xcassets */; };
 		9BE317001983E65200D402FC /* LifeCycleTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE316FF1983E65200D402FC /* LifeCycleTestTests.m */; };
@@ -26,13 +27,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9BD90B61198EA9E800A63721 /* LCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCView.h; sourceTree = "<group>"; };
+		9BD90B62198EA9E800A63721 /* LCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCView.m; sourceTree = "<group>"; };
 		9BE316E31983E65200D402FC /* LifeCycleTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeCycleTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BE316E71983E65200D402FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BE316E81983E65200D402FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9BE316EA1983E65200D402FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9BE316EB1983E65200D402FC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9BE316ED1983E65200D402FC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9BE316EE1983E65200D402FC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9BE316ED1983E65200D402FC /* LCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCViewController.h; sourceTree = "<group>"; };
+		9BE316EE1983E65200D402FC /* LCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCViewController.m; sourceTree = "<group>"; };
 		9BE316F11983E65200D402FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9BE316F31983E65200D402FC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9BE316F91983E65200D402FC /* LifeCycleTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LifeCycleTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,8 +84,10 @@
 			children = (
 				9BE316EA1983E65200D402FC /* AppDelegate.h */,
 				9BE316EB1983E65200D402FC /* AppDelegate.m */,
-				9BE316ED1983E65200D402FC /* ViewController.h */,
-				9BE316EE1983E65200D402FC /* ViewController.m */,
+				9BE316ED1983E65200D402FC /* LCViewController.h */,
+				9BE316EE1983E65200D402FC /* LCViewController.m */,
+				9BD90B61198EA9E800A63721 /* LCView.h */,
+				9BD90B62198EA9E800A63721 /* LCView.m */,
 				9BE316F01983E65200D402FC /* Main.storyboard */,
 				9BE316F31983E65200D402FC /* Images.xcassets */,
 				9BE316E61983E65200D402FC /* Supporting Files */,
@@ -215,7 +220,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BE316EF1983E65200D402FC /* ViewController.m in Sources */,
+				9BE316EF1983E65200D402FC /* LCViewController.m in Sources */,
+				9BD90B63198EA9E800A63721 /* LCView.m in Sources */,
 				9BE316EC1983E65200D402FC /* AppDelegate.m in Sources */,
 				9BE316E91983E65200D402FC /* main.m in Sources */,
 			);

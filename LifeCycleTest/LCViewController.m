@@ -6,280 +6,340 @@
 //  Copyright (c) 2014 Brad Bambara. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "LCViewController.h"
 
-#define printCurrentMethod() (NSLog(@"%@", NSStringFromSelector(_cmd)))
+#define startMethod() (NSLog(@"start -- %@", NSStringFromSelector(_cmd)))
+#define endMethod() (NSLog(@"end   -- %@", NSStringFromSelector(_cmd)))
 
-@interface ViewController ()
+@interface LCViewController ()
             
 @property (weak, nonatomic) IBOutlet UIView *testIBOutlet;
 
 @end
 
-@implementation ViewController
+@implementation LCViewController
 
 -(id)init
 {
+	startMethod();
 	self = [super init];
 	if(self)
 	{
-		printCurrentMethod();
 	}
+	endMethod();
 	return self;
 }
 
 -(id)initWithCoder:(NSCoder *)aDecoder
 {
+	startMethod();
 	self = [super initWithCoder:aDecoder];
 	if(self)
 	{
-		printCurrentMethod();
 	}
+	endMethod();
 	return self;
 }
 
 -(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
+	startMethod();
 	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
 	if(self)
 	{
-		printCurrentMethod();
 	}
+	endMethod();
 	return self;
 }
 
 -(void)setTestIBOutlet:(UIView *)testIBOutlet
 {
+	startMethod();
 	_testIBOutlet = testIBOutlet;
-	printCurrentMethod();
+	endMethod();
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-	printCurrentMethod();
+	startMethod();
 	NSLog(@"^(%@)", [segue class]);
+	endMethod();
 }
             
 - (void)viewDidLoad {
+	startMethod();
 	[super viewDidLoad];
-	printCurrentMethod();
+	endMethod();
 }
 
 -(void)loadView
 {
+	startMethod();
 	[super loadView];
-	printCurrentMethod();
+	endMethod();
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
+	startMethod();
 	[super viewWillAppear:animated];
-	printCurrentMethod();
+	endMethod();
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
+	startMethod();
 	[super viewDidAppear:animated];
-	printCurrentMethod();
+	endMethod();
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
+	startMethod();
 	[super viewWillDisappear:animated];
-	printCurrentMethod();
+	endMethod();
 }
 
 - (void)viewDidDisappear:(BOOL)animated
 {
+	startMethod();
 	[super viewDidDisappear:animated];
-	printCurrentMethod();
+	endMethod();
 }
 
 - (void)viewWillLayoutSubviews
 {
+	startMethod();
 	[super viewWillLayoutSubviews];
-	printCurrentMethod();
+	endMethod();
 }
 
 - (void)viewDidLayoutSubviews
 {
+	startMethod();
 	[super viewDidLayoutSubviews];
-	printCurrentMethod();
+	endMethod();
 }
 
 - (BOOL)isBeingPresented
 {
-	printCurrentMethod();
-	return [super isBeingPresented];
+	startMethod();
+	BOOL b = [super isBeingPresented];
+	endMethod();
+	return b;
 }
 
 - (BOOL)isBeingDismissed
 {
-	printCurrentMethod();
-	return [super isBeingDismissed];
+	startMethod();
+	BOOL b = [super isBeingDismissed];
+	endMethod();
+	return b;
 }
 
 - (BOOL)isMovingToParentViewController
 {
-	printCurrentMethod();
-	return [super isMovingToParentViewController];
+	startMethod();
+	BOOL b = [super isMovingToParentViewController];
+	endMethod();
+	return b;
 }
 
 - (BOOL)isMovingFromParentViewController
 {
-	printCurrentMethod();
-	return [super isMovingFromParentViewController];
+	startMethod();
+	BOOL b = [super isMovingFromParentViewController];
+	endMethod();
+	return b;
 }
 
 - (BOOL)shouldAutorotate
 {
-	printCurrentMethod();
-	return [super shouldAutorotate];
+	startMethod();
+	BOOL b = [super shouldAutorotate];
+	endMethod();
+	return b;
 }
 
 - (NSUInteger)supportedInterfaceOrientations
 {
-	printCurrentMethod();
-	return [super supportedInterfaceOrientations];
+	startMethod();
+	NSUInteger i = [super supportedInterfaceOrientations];
+	endMethod();
+	return i;
 }
 
 - (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
 {
-	printCurrentMethod();
-	return [super preferredInterfaceOrientationForPresentation];
+	startMethod();
+	UIInterfaceOrientation i = [super preferredInterfaceOrientationForPresentation];
+	endMethod();
+	return i;
 }
 
 -(UIRectEdge)edgesForExtendedLayout
 {
-	printCurrentMethod();
-	return [super edgesForExtendedLayout];
+	startMethod();
+	UIRectEdge r = [super edgesForExtendedLayout];
+	endMethod();
+	return r;
 }
 
 -(BOOL)extendedLayoutIncludesOpaqueBars
 {
-	printCurrentMethod();
-	return [super extendedLayoutIncludesOpaqueBars];
+	startMethod();
+	BOOL b = [super extendedLayoutIncludesOpaqueBars];
+	endMethod();
+	return b;
 }
 
 -(BOOL)automaticallyAdjustsScrollViewInsets
 {
-	printCurrentMethod();
-	return [super automaticallyAdjustsScrollViewInsets];
+	startMethod();
+	BOOL b = [super automaticallyAdjustsScrollViewInsets];
+	endMethod();
+	return b;
 }
 
 -(CGSize)preferredContentSize
 {
-	printCurrentMethod();
-	return [super preferredContentSize];
+	startMethod();
+	CGSize s = [super preferredContentSize];
+	endMethod();
+	return s;
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle
 {
-	printCurrentMethod();
-	return [super preferredStatusBarStyle];
+	startMethod();
+	UIStatusBarStyle s = [super preferredStatusBarStyle];
+	endMethod();
+	return s;
 }
 
 - (BOOL)prefersStatusBarHidden
 {
-	printCurrentMethod();
-	return [super prefersStatusBarHidden];
+	startMethod();
+	BOOL b = [super prefersStatusBarHidden];
+	endMethod();
+	return b;
 }
 
 - (UIStatusBarAnimation)preferredStatusBarUpdateAnimation
 {
-	printCurrentMethod();
-	return [super  preferredStatusBarUpdateAnimation];
+	startMethod();
+	UIStatusBarAnimation a = [super  preferredStatusBarUpdateAnimation];
+	endMethod();
+	return a;
 }
 
 - (void)setNeedsStatusBarAppearanceUpdate
 {
-	printCurrentMethod();
-	return [super setNeedsStatusBarAppearanceUpdate];
+	startMethod();
+	[super setNeedsStatusBarAppearanceUpdate];
+	endMethod();
 }
 
 - (void)willMoveToParentViewController:(UIViewController *)parent
 {
-	printCurrentMethod();
+	startMethod();
 	NSLog(@"^(%@)", [parent class]);
 	[super willMoveToParentViewController:parent];
+	endMethod();
 }
 
 - (void)didMoveToParentViewController:(UIViewController *)parent
 {
-	printCurrentMethod();
+	startMethod();
 	NSLog(@"^(%@)", [parent class]);
 	[super didMoveToParentViewController:parent];
+	endMethod();
 }
 
 -(NSString *)restorationIdentifier
 {
-	printCurrentMethod();
-	return [super restorationIdentifier];
+	startMethod();
+	NSString* ID = [super restorationIdentifier];
+	endMethod();
+	return ID;
 }
 
 -(Class<UIViewControllerRestoration>)restorationClass
 {
-	printCurrentMethod();
-	return [super restorationClass];
+	startMethod();
+	Class<UIViewControllerRestoration> c = [super restorationClass];
+	endMethod();
+	return c;
 }
 
 - (void) encodeRestorableStateWithCoder:(NSCoder *)coder
 {
+	startMethod();
 	[super encodeRestorableStateWithCoder:coder];
-	printCurrentMethod();
+	endMethod();
 }
 
 - (void) decodeRestorableStateWithCoder:(NSCoder *)coder
 {
+	startMethod();
 	[super decodeRestorableStateWithCoder:coder];
-	printCurrentMethod();
+	endMethod();
 }
 
 - (void) applicationFinishedRestoringState
 {
+	startMethod();
 	[super applicationFinishedRestoringState];
-	printCurrentMethod();
+	endMethod();
 }
 
 - (void)updateViewConstraints
 {
+	startMethod();
 	[super updateViewConstraints];
-	printCurrentMethod();
+	endMethod();
 }
 
 - (void)preferredContentSizeDidChangeForChildContentContainer:(id <UIContentContainer>)container
 {
+	startMethod();
 	[super preferredContentSizeDidChangeForChildContentContainer:container];
-	printCurrentMethod();
+	endMethod();
 }
 
 - (void)systemLayoutFittingSizeDidChangeForChildContentContainer:(id <UIContentContainer>)container
 {
+	startMethod();
 	[super systemLayoutFittingSizeDidChangeForChildContentContainer:container];
-	printCurrentMethod();
+	endMethod();
 }
 
 - (CGSize)sizeForChildContentContainer:(id <UIContentContainer>)container withParentContainerSize:(CGSize)parentSize
 {
-	printCurrentMethod();
-	return [super sizeForChildContentContainer:container withParentContainerSize:parentSize];
+	startMethod();
+	CGSize s = [super sizeForChildContentContainer:container withParentContainerSize:parentSize];
+	endMethod();
+	return s;
 }
 
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator>)coordinator
 {
+	startMethod();
 	[super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
-	printCurrentMethod();
+	endMethod();
 }
 
 - (void)willTransitionToTraitCollection:(UITraitCollection *)newCollection withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator>)coordinator
 {
+	startMethod();
 	[super willTransitionToTraitCollection:newCollection withTransitionCoordinator:coordinator];
-	printCurrentMethod();
+	endMethod();
 }
 
 -(void)dealloc
 {
-	printCurrentMethod();
+	startMethod();
+	endMethod();
 }
 
 @end
