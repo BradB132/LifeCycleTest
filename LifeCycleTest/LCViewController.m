@@ -8,8 +8,8 @@
 
 #import "LCViewController.h"
 
-#define startMethod() (NSLog(@"start -- %@", NSStringFromSelector(_cmd)))
-#define endMethod() (NSLog(@"end   -- %@", NSStringFromSelector(_cmd)))
+#define startMethod() (NSLog(@"%@ start -- %@", [self class], NSStringFromSelector(_cmd)))
+#define endMethod() (NSLog(@"%@ end   -- %@", [self class], NSStringFromSelector(_cmd)))
 
 @interface LCViewController ()
             
@@ -52,6 +52,13 @@
 	return self;
 }
 
+-(void)awakeFromNib
+{
+	startMethod();
+	[super awakeFromNib];
+	endMethod();
+}
+
 -(void)setTestIBOutlet:(UIView *)testIBOutlet
 {
 	startMethod();
@@ -62,7 +69,7 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
 	startMethod();
-	NSLog(@"^(%@)", [segue class]);
+//	NSLog(@"^(%@)", [segue class]);
 	endMethod();
 }
             
@@ -243,7 +250,7 @@
 - (void)willMoveToParentViewController:(UIViewController *)parent
 {
 	startMethod();
-	NSLog(@"^(%@)", [parent class]);
+//	NSLog(@"^(%@)", [parent class]);
 	[super willMoveToParentViewController:parent];
 	endMethod();
 }
@@ -251,7 +258,7 @@
 - (void)didMoveToParentViewController:(UIViewController *)parent
 {
 	startMethod();
-	NSLog(@"^(%@)", [parent class]);
+//	NSLog(@"^(%@)", [parent class]);
 	[super didMoveToParentViewController:parent];
 	endMethod();
 }

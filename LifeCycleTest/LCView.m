@@ -8,8 +8,8 @@
 
 #import "LCView.h"
 
-#define startMethod() (NSLog(@"start -- %@", NSStringFromSelector(_cmd)))
-#define endMethod() (NSLog(@"end   -- %@", NSStringFromSelector(_cmd)))
+#define startMethod() (NSLog(@"%@ start -- %@", [self class], NSStringFromSelector(_cmd)))
+#define endMethod() (NSLog(@"%@ end   -- %@", [self class], NSStringFromSelector(_cmd)))
 
 @implementation LCView
 
@@ -52,6 +52,13 @@
 	}
 	endMethod();
 	return self;
+}
+
+-(void)awakeFromNib
+{
+	startMethod();
+	[super awakeFromNib];
+	endMethod();
 }
 
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
